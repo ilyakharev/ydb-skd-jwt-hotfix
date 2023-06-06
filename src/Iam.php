@@ -113,7 +113,7 @@ class Iam implements IamTokenContract
 
         $curl = curl_init(static::IAM_TOKEN_API_URL);
 
-        print_r($request_data);
+        //print_r($request_data);
 
         curl_setopt_array($curl, [
             CURLOPT_RETURNTRANSFER => 1,
@@ -131,7 +131,7 @@ class Iam implements IamTokenContract
 
         $status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 
-        print_r($result);
+        //print_r($result);
 
         if ($status === 200)
         {
